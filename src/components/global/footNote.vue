@@ -83,7 +83,7 @@ const state = reactive({
   ]
 });
 function getAssetsUrl(uri: string) {
-  return new URL('/src/assets/svg/' + uri + '.svg', import.meta.url);
+  return new URL('/src/assets/svg/' + uri + '.svg', import.meta.url).href;
 }
 </script>
 
