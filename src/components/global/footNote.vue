@@ -26,9 +26,29 @@
     <footer class="baseFooter">
       <!-- Social Links -->
       <aside class="socialLinks dFlex">
-        <section v-for="link in state.socialLinks" :key="link.name" class="mediaLink">
-          <a :href="link.hrefPath" target="_blank">
-            <img :src="getAssetsUrl(link.name)" :alt="link.name">
+        <section class="mediaLink">
+          <a href="https://www.linkedin.com/" target="_blank">
+            <img src="/src/assets/svg/linkedin.svg" alt="Linkedin">
+          </a>
+        </section>
+        <section class="mediaLink">
+          <a href="https://www.twitter.com/" target="_blank">
+            <img src="/src/assets/svg/twitter.svg" alt="Twitter">
+          </a>
+        </section>
+        <section class="mediaLink">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="/src/assets/svg/facebook.svg" alt="Facebook">
+          </a>
+        </section>
+        <section class="mediaLink">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="/src/assets/svg/instagram.svg" alt="Instagram">
+          </a>
+        </section>
+        <section class="mediaLink">
+          <a href="https://api.whatsapp.com/send?phone=917893847799" target="_blank">
+            <img src="/src/assets/svg/whatsapp.svg" alt="Whatsapp">
           </a>
         </section>
       </aside>
@@ -62,28 +82,10 @@ const state = reactive({
       path: "contact",
       name: "Contact Us"
     }
-  ],
-  socialLinks: [
-    {
-      hrefPath: "https://www.linkedin.com/",
-      name: "linkedin"
-    }, {
-      hrefPath: "https://www.twitter.com/",
-      name: "twitter"
-    }, {
-      hrefPath: "https://www.facebook.com/",
-      name: "facebook"
-    }, {
-      hrefPath: "https://www.instagram.com/",
-      name: "instagram"
-    }, {
-      hrefPath: "https://api.whatsapp.com/send?phone=917893847799",
-      name: "whatsapp"
-    }
   ]
 });
 function getAssetsUrl(uri: string) {
-  return new URL('../../assets/svg/' + uri + '.svg', import.meta.url).href;
+  return new URL('/src/assets/svg/' + uri + '.svg', import.meta.url);
 }
 </script>
 
