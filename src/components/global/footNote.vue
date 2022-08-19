@@ -28,7 +28,7 @@
       <aside class="socialLinks dFlex">
         <section v-for="link in state.socialLinks" :key="link.name" class="mediaLink">
           <a :href="link.hrefPath" target="_blank">
-            <img :src="getIcoAsset(link.name)" :alt="link.name">
+            <img :src="getAssetsUrl(link.name)" :alt="link.name">
           </a>
         </section>
       </aside>
@@ -82,8 +82,8 @@ const state = reactive({
     }
   ]
 });
-function getIcoAsset(src: string) {
-  return '/src/assets/svg/' + src + '.svg';
+function getAssetsUrl(uri: string) {
+  return new URL('/src/assets/svg/' + uri + '.svg', import.meta.url);
 }
 </script>
 
