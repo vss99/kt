@@ -14,6 +14,14 @@
           <img src="/src/assets/svg/call.svg" alt="call">
           <a href="tel:+917893847799"> +91 78938 47799 </a>
         </article>
+        <article class="linkItem">
+          <img src="/src/assets/svg/location.svg" alt="address">
+          <address>
+            <p>
+              Plot no-1, Brundavan Enclave, Hydernagar, Hyderabad, Pin -500085
+            </p>
+          </address>
+        </article>
       </section>
     </article>
   </section>
@@ -72,6 +80,10 @@ figure {
   display: inline-block;
   margin-right: 20px;
 }
+.ktContact .contactLinks .linkItem address p {
+  margin: 0;
+}
+.ktContact .contactLinks .linkItem address p,
 .ktContact .contactLinks .linkItem a {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
@@ -102,6 +114,18 @@ figure {
     padding: 20px 40px 60px;
     display: block;
     box-sizing: border-box;
+  }
+  ..ktContact .contactLinks .linkItem a,
+  .ktContact .contactLinks .linkItem address p {
+    max-width: 320px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 375px) {
+  .ktContact .contactLinks .linkItem a,
+  .ktContact .contactLinks .linkItem address p {
+    max-width: 250px;
+    font-size: 20px;
   }
 }
 </style>
